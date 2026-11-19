@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Running Shoes | Product Details</title>
+    <meta
+      name="description"
+      content="Explore running shoe photos, available sizes and size conversions"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://sportano.ua/media/favicon/websites/11/favicon_2503.svg"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <ol>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li><span aria-hidden="true">›</span> <a href="#">Footwear</a></li>
+          <li>
+            <span aria-hidden="true">›</span> <a href="#" aria-current="page">Running shoes</a>
+          </li>
+        </ol>
+      </nav>
+
+      <article class="product">
+        <p class="product__error error-message" role="alert" hidden>
+          <span class="error-message__wrapper">
+            <span class="error-message__icon" aria-hidden="true">⚠️</span>
+            <span class="error-message__title">Product details are unavailable</span>
+            <span class="error-message__hint">Reload the page to try again</span>
+          </span>
+        </p>
+        <div class="product__layout">
+          <section class="gallery" aria-label="Product gallery">
+            <div class="gallery__photo">
+              <p class="gallery__unavailable" role="status" hidden>⚠️ Product image unavailable</p>
+              <span class="badge badge_sale gallery__discount" hidden></span>
+            </div>
+            <div class="gallery__previews" hidden>
+              <span class="gallery__preview"></span>
+              <span class="gallery__preview"></span>
+              <span class="gallery__preview"></span>
+              <span class="gallery__preview"></span>
+            </div>
+          </section>
+
+          <div class="product__details">
+            <div class="skeleton" hidden>
+              <div class="product__badges">
+                <span class="badge"></span>
+                <span class="badge"></span>
+              </div>
+              <div class="product__title"><span class="skeleton__title"></span></div>
+              <div class="product__rating"><span class="skeleton__rating"></span></div>
+              <div class="product__price"><span class="skeleton__price"></span></div>
+
+              <div class="product__options">
+                <div class="skeleton__option">
+                  <span class="skeleton__label skeleton__label_color"></span>
+                  <div class="product__choices">
+                    <span class="skeleton__color"></span>
+                    <span class="skeleton__color"></span>
+                    <span class="skeleton__color"></span>
+                    <span class="skeleton__color"></span>
+                    <span class="skeleton__color"></span>
+                  </div>
+                </div>
+                <div class="skeleton__option">
+                  <span class="skeleton__label"></span>
+                  <div class="product__choices product__choices_sizes">
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                    <span class="skeleton__size"></span>
+                  </div>
+                </div>
+                <div class="product__size-guide skeleton__guide"><span></span></div>
+              </div>
+
+              <div class="product__quantity-row">
+                <div class="quantity">
+                  <span class="skeleton__quantity-button"></span>
+                  <span class="skeleton__quantity-value"></span>
+                  <span class="skeleton__quantity-button"></span>
+                </div>
+                <span class="skeleton__stock"></span>
+              </div>
+
+              <div class="product__actions">
+                <span class="skeleton__action"></span>
+                <span class="skeleton__action"></span>
+              </div>
+              <div class="product__benefits skeleton__benefits">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="product__content" hidden>
+              <div class="product__badges">
+                <span class="badge badge_new" hidden>New arrival</span>
+                <span class="badge badge_sale" hidden>On sale</span>
+              </div>
+              <h1 class="product__title"></h1>
+              <div class="product__rating">
+                <span class="product__stars" aria-hidden="true">★★★★★</span>
+                <span class="visually-hidden">Rating</span>
+                <span class="product__rating-value"></span>
+                <span class="visually-hidden">out of 5</span>
+                <span aria-hidden="true">·</span>
+                <button class="text-action product__reviews-button" type="button"></button>
+              </div>
+              <p class="product__price">
+                <strong class="product__current-price"></strong>
+                <s class="product__original-price" hidden></s>
+                <span class="product__discount-amount" hidden></span>
+              </p>
+
+              <div class="product__options">
+                <fieldset>
+                  <legend>
+                    Color
+                    <span class="product__selected-color"
+                      >- <span class="product__color-name"></span
+                    ></span>
+                  </legend>
+                  <div class="product__choices product__choices_colors"></div>
+                </fieldset>
+                <fieldset>
+                  <legend>Size</legend>
+                  <div class="product__choices product__choices_sizes"></div>
+                </fieldset>
+                <button class="text-action product__size-guide" type="button">
+                  <span aria-hidden="true">📐</span>Size guide
+                </button>
+              </div>
+
+              <div class="product__quantity-row">
+                <div class="quantity">
+                  <button
+                    class="quantity__button quantity__button_decrease"
+                    type="button"
+                    aria-label="Decrease quantity"
+                  >
+                    −
+                  </button>
+                  <output class="quantity__value" aria-label="Quantity"></output>
+                  <button
+                    class="quantity__button quantity__button_increase"
+                    type="button"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
+                <span class="product__stock"></span>
+              </div>
+
+              <div class="product__actions">
+                <button type="button" disabled>
+                  <span aria-hidden="true">🛒</span> Add to cart
+                </button>
+                <button type="button" disabled>
+                  <span aria-hidden="true">❤️</span> Add to wishlist
+                </button>
+              </div>
+              <ul class="product__benefits">
+                <li>
+                  <span aria-hidden="true">🚚</span> <strong>Free delivery</strong> on orders over
+                  $60
+                </li>
+                <li>
+                  <span aria-hidden="true">🔄</span> <strong>30-day returns</strong> - free & easy
+                </li>
+                <li>
+                  <span aria-hidden="true">🛡️</span> <strong>2-year warranty</strong> included
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-info" hidden>
+          <div class="product-info__tabs" role="tablist" aria-label="Product information">
+            <button
+              type="button"
+              role="tab"
+              id="description-tab"
+              aria-controls="description-panel"
+              aria-selected="true"
+            >
+              Description
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="specifications-tab"
+              aria-controls="specifications-panel"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Specifications
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="reviews-tab"
+              aria-controls="reviews-panel"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Reviews
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="delivery-tab"
+              aria-controls="delivery-panel"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Delivery & returns
+            </button>
+          </div>
+          <div
+            class="product-info__panel"
+            id="description-panel"
+            role="tabpanel"
+            aria-labelledby="description-tab"
+            tabindex="0"
+          >
+            <p class="product-info__description"></p>
+          </div>
+          <div
+            class="product-info__panel"
+            id="specifications-panel"
+            role="tabpanel"
+            aria-labelledby="specifications-tab"
+            tabindex="0"
+            hidden
+          >
+            <p>See the size guide for foot lengths and EU, UK, and US sizes</p>
+          </div>
+          <div
+            class="product-info__panel"
+            id="reviews-panel"
+            role="tabpanel"
+            aria-labelledby="reviews-tab"
+            tabindex="0"
+            hidden
+          >
+            <p class="product-info__reviews-summary"></p>
+          </div>
+          <div
+            class="product-info__panel"
+            id="delivery-panel"
+            role="tabpanel"
+            aria-labelledby="delivery-tab"
+            tabindex="0"
+            hidden
+          >
+            <p>Free delivery on orders over $60 and free returns within 30 days</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <dialog class="size-guide" aria-labelledby="size-guide-title">
+      <div class="size-guide__header">
+        <h2 id="size-guide-title"><span aria-hidden="true">📐</span>Size guide</h2>
+        <form method="dialog">
+          <button type="submit" aria-label="Close size guide" autofocus>×</button>
+        </form>
+      </div>
+      <table>
+        <caption class="size-guide__caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col">EU</th>
+            <th scope="col">UK</th>
+            <th scope="col">US</th>
+            <th scope="col">Foot length (cm)</th>
+          </tr>
+        </thead>
+        <tbody class="size-guide__rows"></tbody>
+      </table>
+    </dialog>
+  </body>
+</html>
