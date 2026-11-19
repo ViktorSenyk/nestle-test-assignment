@@ -2,7 +2,7 @@
 
 A simple running shoe product page built with HTML, CSS & vanilla JavaScript. Product data comes from MockAPI
 
-##[Live demo](https://nestle-test-assigment.netlify.app/)
+### [🔎 Live demo](https://nestle-test-assigment.netlify.app/)
 
 ## Features
 
