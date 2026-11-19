@@ -5,7 +5,6 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'script',
       globals: {
-        AbortSignal: 'readonly',
         document: 'readonly',
         fetch: 'readonly',
         Image: 'readonly',

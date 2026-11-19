@@ -1,5 +1,4 @@
 const PRODUCT_ENDPOINT = 'https://6aff15db3a0e70bc8d54929b.mockapi.io/nestle/products/1';
-const REQUEST_TIMEOUT_MS = 4000;
 
 const renderSummary = ({ name, description, price, originalPrice, currency, rating, isNew }) => {
   const formatPrice = amount => amount.toLocaleString('en-US', { style: 'currency', currency });
@@ -175,7 +174,9 @@ const setupSizeGuide = ({ name, sizeGuide }) => {
   });
 
   dialog.addEventListener('click', event => {
-    if (event.target !== dialog) return;
+    if (event.target !== dialog) {
+      return;
+    }
     const { left, top, right, bottom } = dialog.getBoundingClientRect();
     if (
       event.clientX < left ||
@@ -249,10 +250,10 @@ const initialize = async () => {
   skeleton.hidden = false;
   document.querySelector('.gallery__previews').hidden = false;
   try {
-    const response = await fetch(PRODUCT_ENDPOINT, {
-      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    });
-    if (!response.ok) throw new Error(`⚠️ Product request failed (${response.status})`);
+    const response = await fetch(PRODUCT_ENDPOINT);
+    if (!response.ok) {
+      throw new Error(`⚠️ Product request failed (${response.status})`);
+    }
 
     const product = await response.json();
     renderSummary(product);
